@@ -9,10 +9,11 @@ class User(AbstractUser):
         ('Ustoz', 'Ustoz'),
         ('Oquvchi', 'Oquvchi')
     ]
-    status = models.CharField(max_length=10, choices=ROLE_CHOICES, default='Oquvchi')
+    status = models.CharField(max_length=30, choices=ROLE_CHOICES, default='Oquvchi')
     photo = models.ImageField(upload_to='user/', default='1.png')
     phone_number = models.CharField(max_length=15, null=True, blank=True)
     
+
     # USERNAME_FIELD = 'username'
     # REQUIRED_FIELDS = []
 
