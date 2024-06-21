@@ -13,3 +13,15 @@ class UserCreateView(ListCreateAPIView):
     permission_classes = []
     authentication_classes = []
 
+
+class SubjectView(ListCreateAPIView):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
+    permission_classes = []
+    authentication_classes = []
+
+
+class RoomView(ListCreateAPIView):
+    queryset = Room.objects.all()
+    serializer_class = RoomSerializer
+    

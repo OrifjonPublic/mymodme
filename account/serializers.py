@@ -61,3 +61,14 @@ class MyOwnSerializer(TokenObtainPairSerializer):
             data['status'] = self.user.status
         data['photo'] = self.user.photo.url       
         return data
+
+
+class SubjectSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Subject
+        fields = '__all__'
+
+class RoomSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Room
+        fields = '__all__'
